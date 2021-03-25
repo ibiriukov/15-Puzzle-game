@@ -1,6 +1,6 @@
 	//JavaScript
-	
-
+	// Testing changes
+ 
 	function dispRules() {
 	  document.getElementById("rulesBox").style.display = 'block';
       document.getElementById("introBox").style.display = 'none';
