@@ -1,12 +1,95 @@
-<!DOCTYPE html>
+<!Programming team-1>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>15-puzzle game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+   
+   
+    <!***********RULES_SECTION**************************BEGINNING********************************************** >  
+	    
+		<div id="rulesBox">
+			<div id="stickyBox"> 
+				<button id="introScreenBack"; onclick="dispIntro()" >Continue</button> 
+			</div>
+        
+			<div id="rulesContentBox">
+				<h2 style ="margin-left:80px">Rules of the game:</h2>
+				<ul>
+
+					 <li>The "15 puzzle" is a sliding square puzzle;</li>
+					 <li>Reposition the squares one at a time into the configuration shown before;</li>
+					 <li>Arrange the tiles from number one to fifteen;</li>
+					 <li>Move tiles up and down, to left or to the right toward the empty tile;</li>
+					 <li>Tiles cannot be removed;</li>
+					 <li>Enjoy playing the game.</li>
+				</ul>			 
+		    </div>
+		</div>
+        
+    <!***********RULES_SECTION**************************END********************************************** >     
+
+       
+		  
+	<!***********INTRO_SECTION**************************BEGINNING********************************************** > 	
+		
+		<div id="introBox">
+           <div id="exitAppBox"; > 
+           <p style= "color: red"> Application is terminated</p>
+          </div>
+        <h1> Welcome to 15-puzzle game </h1>
+		<img src="15_puzzle_game.png" alt="15-puzzle game" width="12%"><br>
+		
+		<button id="playGame"; onclick="playGame()">Play Game</button>
+		
+        <button id="displayRules"; onclick="dispRules()">Display Rules</button>
+		
+        <button id="exitGame"; onclick="exitGame()">Exit Game</button>
+		
+		
+      </div>
+    
+	<!***********INTRO_SECTION**************************END********************************************** >     
+        
+      
+    <!***********GAME_SECTION**************************BEGINNING********************************************** > 
+	 
+		<div id="gameBox">
+          <h1>15-puzzle game</h1>
+            <a href="#"; id="toIntro"; onclick="dispIntro()">Go to Introduction</a>
+            
+			<div class="grid">
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
+				<button>4</button>
+				<button>5</button>
+				<button>6</button>
+				<button>7</button>
+				<button>8</button>
+				<button>9</button>
+				<button>10</button>
+				<button>11</button>
+				<button>12</button>
+				<button>13</button>
+				<button>14</button>
+				<button>15</button>
+				<button></button>
+			</div>
+
+		  <div class="footer">
+			<button>Play</button>
+			<span id="move">Move: 100</span>
+			<span id="time">Time: 100</span>
+		  </div>
+    </div>
+    
+    <!***********GAME_SECTION**************************END********************************************** >     
+	  
+    
+    
     <script src="script.js"></script>
   </body>
 </html>
