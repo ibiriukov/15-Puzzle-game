@@ -1,14 +1,14 @@
 	//JavaScript
-	// Testing changes
- 
+	
+
 	function dispRules() {
-	  document.getElementById("rulesBox").style.display = 'block';
+	  document.getElementById("rulesBox").style.display = 'inline-block';
       document.getElementById("introBox").style.display = 'none';
 	  document.getElementById("gameBox").style.display = 'none';
       
 }
     function dispIntro() {
-	  document.getElementById("introBox").style.display = 'block';
+	  document.getElementById("introBox").style.display = 'inline-block';
       document.getElementById("rulesBox").style.display = "none";
       document.getElementById("gameBox").style.display = 'none';	  
 }
