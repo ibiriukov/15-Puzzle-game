@@ -4,20 +4,44 @@ html {
 
 body {
   height: 100%;
-  background-color:#83c5be;
-  text-align: center; 
+  width: 100%;
+  background-image: url("Blank_Game_Background.png");
+  background-position: center; 
+  background-repeat: repeat; 
+  background-size: cover;
+  text-align:center;
+ 
+   
+}
+#img_container{
+	height: auto;
+    width: 100%;
+	 
+    overflow:auto;	
+}
+
+
+#imagePete {
+	float:right;
+	margin:25px;
+	  
+  
+}
+#imagePete2 {
+	float:left;
+	margin:25px;
+	  
 }
 
 #introBox {
-	background-color: white;
-	height:100%;
-	width:97%;	  
+	    
 	text-align: center;
     padding: 20px;
-		
+	display: inline-block;	
 }
 #introBox button{
 	margin-right:10px;
+	padding:15px;
 	 
 }
 
@@ -26,9 +50,11 @@ body {
 }
 
 #rulesBox{
-	width: 100%;
-	height: 100%;
-	background-color: white;    
+    
+	width: auto;
+	height: 50%;
+	border-bottom: 1px solid #6d6875;
+    border-left: 1px solid #6d6875;     
 	overflow-y: scroll;
     display: none;	 
 	
@@ -38,6 +64,11 @@ body {
    
   text-align:left;
   display: inline-block;
+  
+   
+}
+#rulesContentBox ul li{
+	font-size:20px;
 }
 
 #exitAppBox{
@@ -59,11 +90,9 @@ color: white;
 	  background-color: #6d6875;
 	  padding-top:10px;
 	  padding-bottom: 10px;  
-      border-bottom: 1px solid white;
+      
 }
 
-
-/* "Start Game" Section ************BEGINNING************* */
 #gameBox {
       width: 320px;
 	  margin-top: 15px;
@@ -133,4 +162,81 @@ color: white;
 	  height: 80px;
 }
 
+@media screen and (max-width: 1400px) {
+  #gameBox{
+	 width: 240px;
+	 margin-top: 5px;
+	 padding: 5px;
+  }
+  .grid{
+   grid-template-columns: 60px 60px 60px 60px;
+	  grid-template-rows: 60px 60px 60px 60px;
+  margin-top:5px;
+  
+  }
+  
+  #move, #time {
+	 font-size: 12px; 
+  }
+  .grid button{
+	 font-size: 18px;  
+  }
+  
+  #imagePete {
+	 
+	 width: 150px;
+    height: auto; 
+  }
+  #imagePete2 {
+	 
+	 width: 150px;
+    height: auto;
+  
+  }
+  }
+@media screen and (max-width: 900px)  {
+  #gameBox{
+	 width: 160px;
+	 margin-top: 5px;
+	 padding: 5px;
+  }
+  .grid{
+   grid-template-columns: 40px 40px 40px 40px;
+	  grid-template-rows: 40px 40px 40px 40px;
+  margin-top:5px;
+  
+  }
+  
+  #move, #time {
+	 font-size: 12px; 
+  }
+  .grid button{
+	 font-size: 18px;  
+  }
+  
+  #imagePete {
+	 
+	 width: 90px;
+    height: auto; 
+  }
+  #imagePete2 {
+	 
+	 width: 90px;
+    height: auto;
+  
+  }
+  }
+
+
+
 /* "Start Game" Section *************END************ */
+
+
+
+
+
+
+
+
+
+
