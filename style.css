@@ -48,6 +48,9 @@ body {
 #introBox img {
 	margin-bottom:20px;
 }
+#introScreenBack{
+ 	border-radius: 5px;  
+}
 
 #rulesBox{
     
