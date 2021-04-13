@@ -57,9 +57,9 @@ body {
 	width: auto;
 	height: 50%;
 	border-bottom: 1px solid #6d6875;
-    border-left: 1px solid #6d6875;     
+  border-left: 1px solid #6d6875;     
 	overflow-y: scroll;
-    display: none;	 
+  display: none;	 
 	
 }
 
@@ -89,10 +89,10 @@ color: white;
 	  position: -webkit-sticky;
 	  position: sticky;
 	  top: 0;
-	  padding: 10px;
+	  padding: 5px;
 	  background-color: #6d6875;
-	  padding-top:10px;
-	  padding-bottom: 10px;  
+	  padding-top:5px;
+	  padding-bottom: 5px;  
       
 }
 
