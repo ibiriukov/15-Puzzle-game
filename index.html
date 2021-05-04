@@ -12,7 +12,7 @@
   <body>
    
    
-    <!***********RULES_SECTION**************************BEGINNING********************************************** >  
+    <!******RULES_SECTION**************BEGINNING************* >  
 	  <div id="img_container";>
       <img id="imagePete"; src="Pete_Logo.png" alt="Pete">
       <img id="imagePete2"; src="Pete_Logo.png" alt="Pete">
@@ -36,11 +36,11 @@
 		    </div>
 		</div>
         
-    <!***********RULES_SECTION**************************END********************************************** >     
+    <!*******RULES_SECTION********END************************ >     
 
        
 		  
-	<!***********INTRO_SECTION**************************BEGINNING********************************************** > 	
+	<!*******INTRO_SECTION************BEGINNING***************** > 	
 		
 		<div id="introBox">
            <div id="exitAppBox"; > 
@@ -51,23 +51,26 @@
 		
 		<button id="playGame"; onclick="playGame()">Play Game</button>
 		
-        <button id="displayRules"; onclick="dispRules()">Display Rules</button>
+    <button id="displayRules"; onclick="dispRules()">Display Rules</button>
 		
-        <button id="exitGame"; onclick="exitGame()">Exit Game</button>
+    <button id="exitGame"; onclick="exitGame()">Exit Game</button>
 		
 		
       </div>
     
-	<!***********INTRO_SECTION**************************END********************************************** >     
+	<!********INTRO_SECTION*********END************************* >     
         
       
-    <!***********GAME_SECTION**************************BEGINNING********************************************** > 
+    <!******GAME_SECTION*********BEGINNING**************************** > 
 	 
 		<div id="gameBox">
          
-            <a href="#"; id="toIntro"; onclick="dispIntro()">Go to Introduction</a>
-            
-			<div class="grid">
+      <a href="#"; id="toIntro"; onclick="dispIntro()">Go to Introduction</a>
+            <! for testing ><p id="testField"></p>  <! for testing >
+			      <! for testing ><p id="testField2"></p> <! for testing >
+			      <! for testing ><p id="testField3"></p> <! for testing >
+		
+    	<div class="grid">
 				<button>1</button>
 				<button>2</button>
 				<button>3</button>
@@ -87,13 +90,13 @@
 			</div>
 
 		  <div class="footer">
-			<button>Play</button>
+			<button onclick="loadGrid()">Play</button>
 			<span id="move">Move: 100</span>
 			<span id="time">Time: 100</span>
 		  </div>
     </div>
     
-    <!***********GAME_SECTION**************************END********************************************** >     
+    <!*******GAME_SECTION**************END***************************** >     
 	  
     
     
