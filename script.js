@@ -30,13 +30,13 @@
 	  
 }
 
-//********Random Number Generator Section*************
+//********************Random Number Generator Section*****************
 	function randomNumberGenerator(){
 		
 		var randNumList = new Array();
 		document.getElementById("testField").innerHTML = "test";
       
-		var n = 15;
+		var n = 16;
 		  
 		do {
 			// Generating random number
@@ -46,20 +46,21 @@
 			// if the array does not contain it
 			if (!randNumList.includes(randomNumber)) {
 				randNumList.push(randomNumber);
+				
 			}
 		 
 		} while (randNumList.length < n);
   	  
 	 
 	    function randomN(){
-	      var x = Math.floor((Math.random() * 15) + 1);
+	      var x = Math.floor((Math.random() * 16));
 		  return x;
 	    }
 	  
 	  return randNumList;
 	}
 	
-	//****************Load Grid Section*************
+	//********************Load Grid Section*****************
 	function loadGrid(){
 	  
 	 var randN = randomNumberGenerator(); 
@@ -68,17 +69,19 @@
 	 for (var i = 0; i < gridArray.length; i++) {
 			gridArray[i] = new Array(3);
 		}
+		
 	 var rows = 4;
 	 var cels = 4;
 	 var n = 0; 
-	  
+	                                             
 	 document.getElementById("testField2").innerHTML = randN.toString();
 	  				
         for (var b =0; b < rows; b++){	
 	      for (var j =0; j < cels; j++){
-	       gridArray[b][j] = randN[n];
+	       gridArray[b][j] = randN[n];                                   
+		   document.getElementById(n+1).innerHTML = (gridArray[b][j] == 0 ? "" : gridArray[b][j]);
 		   n++;
-		}
+	  	}
 	  }     
        return gridArray;
 	}
