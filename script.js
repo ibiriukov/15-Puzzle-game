@@ -116,6 +116,8 @@
 
 	function stopTimer(){
 	  clearTimeout(t);
+    var c =t;
+    //document.getElementById("testField2").innerHTML =c-1;
 		c =0;
 		timer_is_on=0;
 		document.getElementById('time').innerHTML="Time: " +c+"s";
