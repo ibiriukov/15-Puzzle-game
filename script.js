@@ -74,7 +74,7 @@
 	 var cels = 4;
 	 var n = 0; 
 	                                             
-	 document.getElementById("testField2").innerHTML = randN.toString();
+	 //document.getElementById("testField2").innerHTML = randN.toString();
 	  				
         for (var b =0; b < rows; b++){	
 	      for (var j =0; j < cels; j++){
@@ -83,7 +83,9 @@
 		   n++;
 	  	}
 	  }  
-       countTimer();   
+       
+       countTimer();
+       document.getElementById("testField3").innerHTML = gridArray.join('<br>');   
        return gridArray;
 	}
 
