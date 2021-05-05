@@ -34,7 +34,7 @@
 	function randomNumberGenerator(){
 		
 		var randNumList = new Array();
-		document.getElementById("testField").innerHTML = "test";
+	 //	document.getElementById("testField").innerHTML = "test";
       
 		var n = 16;
 		  
@@ -82,6 +82,40 @@
 		   document.getElementById(n+1).innerHTML = (gridArray[b][j] == 0 ? "" : gridArray[b][j]);
 		   n++;
 	  	}
-	  }     
+	  }  
+       countTimer();   
        return gridArray;
+	}
+
+  //********************Timer & Counter Section*****************
+	function countTimer(){		 	 				
+		var move = document.getElementById("move");				
+		move.innerHTML = "Move: 0"; 		 
+		startTimer();	        			 		 
+	}	
+	
+	var c=0;
+	var t;
+  var timer_is_on=0;
+
+	function timer(){
+	    document.getElementById('time').innerHTML="Time: " +c+"s";
+	  	c=c+1;
+	  	t=setTimeout("timer()",1000);		
+	}
+
+	function startTimer(){
+		if (!timer_is_on){	
+			timer_is_on=1;
+			timer();
+			document.getElementById("play").innerHTML= "Reset";
+		 }else {stopTimer();}  
+	}
+
+	function stopTimer(){
+	  clearTimeout(t);
+		c =0;
+		timer_is_on=0;
+		document.getElementById('time').innerHTML="Time: " +c+"s";
+		startTimer();
 	}
