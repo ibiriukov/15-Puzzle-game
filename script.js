@@ -34,7 +34,7 @@
 	function randomNumberGenerator(){
 		
 		var randNumList = new Array();
-	 //	document.getElementById("testField").innerHTML = "test";
+		//document.getElementById("testField").innerHTML = "test";
       
 		var n = 16;
 		  
@@ -56,70 +56,69 @@
 	      var x = Math.floor((Math.random() * 16));
 		  return x;
 	    }
+	   
+	  loadGrid(randNumList);
 	  
-	  return randNumList;
 	}
 	
 	//********************Load Grid Section*****************
-	function loadGrid(){
+	function loadGrid(arr){
 	  
-	 var randN = randomNumberGenerator(); 
-	  
-	 var gridArray = new Array(4);
-	 for (var i = 0; i < gridArray.length; i++) {
-			gridArray[i] = new Array(3);
-		}
-		
-	 var rows = 4;
-	 var cels = 4;
-	 var n = 0; 
-	                                             
+	 var randN = arr; 
+	                                                 
 	 //document.getElementById("testField2").innerHTML = randN.toString();
-	  				
-        for (var b =0; b < rows; b++){	
-	      for (var j =0; j < cels; j++){
-	       gridArray[b][j] = randN[n];                                   
-		   document.getElementById(n+1).innerHTML = (gridArray[b][j] == 0 ? "" : gridArray[b][j]);
-		   n++;
-	  	}
-	  }  
-       
-       countTimer();
-       document.getElementById("testField3").innerHTML = gridArray.join('<br>');   
-       return gridArray;
+	  		
+        for (var b =0; b < randN.length; b++){	
+	      document.getElementById(b+1).innerHTML = (randN[b] == 0 ? "" : randN[b]);
+		 
+	  }   
+      //alert(gridArray.join('\n')); 
+	   countTimer(); 
+	   moveTile(randN);
+       return randN;
 	}
-
-  //********************Timer & Counter Section*****************
-	function countTimer(){		 	 				
-		var move = document.getElementById("move");				
+	
+	//********************Timer & Counter Section*****************
+	function countTimer(){
+		var resetTimer = 1; 	 		
+		
+		var move = document.getElementById("move");
+				
 		move.innerHTML = "Move: 0"; 		 
-		startTimer();	        			 		 
+		startTimer(resetTimer);		
 	}	
+	
 	
 	var c=0;
 	var t;
-  var timer_is_on=0;
+    var timer_is_on=0;
 
 	function timer(){
 	    document.getElementById('time').innerHTML="Time: " +c+"s";
-	  	c=c+1;
-	  	t=setTimeout("timer()",1000);		
+		c=c+1;
+		t=setTimeout("timer()",1000);		
 	}
 
-	function startTimer(){
+	function startTimer(rT){
+		var resetTimer = rT;
 		if (!timer_is_on){	
 			timer_is_on=1;
 			timer();
 			document.getElementById("play").innerHTML= "Reset";
-		 }else {stopTimer();}  
+		 }else {stopTimer(resetTimer);}  
 	}
 
-	function stopTimer(){
-	  clearTimeout(t);
-     
-    //document.getElementById("testField2").innerHTML =c-1;
+	function stopTimer(rt){
+	    var resetTimer = rt;
+		clearTimeout(t);
+		if (resetTimer == 1){
 		c =0;
 		timer_is_on=0;
+		
 		document.getElementById('time').innerHTML="Time: " +c+"s";
-		startTimer();
+		startTimer();	
+		} else {document.getElementById('time').innerHTML="Time: " +c+"s";}
+		
 	}
+
+  
