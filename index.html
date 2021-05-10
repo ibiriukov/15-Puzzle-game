@@ -17,7 +17,7 @@
 <div id="rulesBox">
     <div id="stickyBox">
         <button id="introScreenBack" onclick="dispIntro()" >Continue</button>
-        <button id="gameScreenBack" onclick="playGame()" >Back</button>
+        <button id="gameScreenBack" onclick="playGame()" >Back to Game</button>
     </div>
 
     <div id="rulesContentBox">
@@ -38,7 +38,7 @@
 <div id="exitTheGame">
  
  <h1>Application is terminated</h1>
-
+     <button id="gameScreenBack" onclick="location.reload()"  >Play again</button>
 </div>
 
 
@@ -53,7 +53,7 @@
 
     <button id="playGame" onclick="playGame()">Play Game</button>
 
-    <button id="displayRules" onclick="dispRules(); test(1)">Display Rules</button>
+    <button id="displayRules" onclick="dispRules(); backScreen(1)">Display Rules</button>
 
     <button id="exitGame" onclick="exitGame()">Exit Game</button>
 
@@ -67,7 +67,7 @@
 
 <div id="gameBox">
 
-    <a href="#"  id="toGame" onclick="dispRules(); test(2)">Rules</a> <br>
+    <a href="#"  id="toGame" onclick="dispRules(); backScreen(2)">Rules</a> <br>
     <a href="#"  id="toIntr" onclick="exit()">Exit</a>
     <! for testing ><p id="testField"></p>  <! for testing >
     <! for testing ><p style="font-size: 10px" id="testField2"></p> <! for testing >

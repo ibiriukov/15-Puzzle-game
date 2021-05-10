@@ -1,5 +1,5 @@
 //JavaScript
-function test(i){
+function backScreen(i){
   if(i == 1){
   document.getElementById("introScreenBack").style.display = 'inline-block';
   document.getElementById("gameScreenBack").style.display = 'none';
