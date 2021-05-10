@@ -5,6 +5,7 @@ function dispRules() {
     document.getElementById("rulesBox").style.display = 'inline-block';
     document.getElementById("introBox").style.display = 'none';
     document.getElementById("gameBox").style.display = 'none';
+    document.getElementById("exitTheGame").style.display ='none';
 
 }
 
@@ -12,10 +13,20 @@ function dispIntro() {
     document.getElementById("introBox").style.display = 'inline-block';
     document.getElementById("rulesBox").style.display = "none";
     document.getElementById("gameBox").style.display = 'none';
+    document.getElementById("exitTheGame").style.display ='none';
 }
 
 function playGame() {
     document.getElementById("gameBox").style.display = 'block';
+    document.getElementById("introBox").style.display = 'none';
+    document.getElementById("rulesBox").style.display = "none";
+    document.getElementById("exitTheGame").style.display ='none';
+}
+
+function exit(){
+    
+    document.getElementById("exitTheGame").style.display = 'block';
+    document.getElementById("gameBox").style.display = 'none';
     document.getElementById("introBox").style.display = 'none';
     document.getElementById("rulesBox").style.display = "none";
 }
