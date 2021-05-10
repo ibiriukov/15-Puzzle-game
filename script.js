@@ -1,5 +1,16 @@
 //JavaScript
+function test(i){
+  if(i == 1){
+  document.getElementById("introScreenBack").style.display = 'inline-block';
+  document.getElementById("gameScreenBack").style.display = 'none';
+  
+  
+  } else{
+    document.getElementById("introScreenBack").style.display = 'none';
+    document.getElementById("gameScreenBack").style.display = 'inline-block';
+  }
 
+}
 
 function dispRules() {
     
