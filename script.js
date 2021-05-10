@@ -61,7 +61,8 @@ function timeOut() {
 var gameActive = false;
 function randomNumberGenerator() {
 
-    var randNumList = new Array();
+   var randNumList = new Array();
+    
     //document.getElementById("testField").innerHTML = "test";
 
     var n = 16;
@@ -92,8 +93,15 @@ function randomNumberGenerator() {
 
 //********************Load Grid Section*****************
 function loadGrid(arr) {
-
+    var n = 0; 
     var randN = arr;
+     
+    for (var a =0; a < randN.length; a++){		     	 
+		 if (randN[a] == a+1){			  
+		 n++;	 	 		 	     
+		  }
+    }
+
     console.log("this is arr in loadGrid " + arr);
     //document.getElementById("testField2").innerHTML = randN.toString();
 
@@ -102,6 +110,12 @@ function loadGrid(arr) {
 
     }
     //alert(gridArray.join('\n'));
+    if (n == 15){
+		   randomNumberGenerator();  
+		 }  
+		  
+	  
+
     countTimer();
     return randN;
 }
