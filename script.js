@@ -230,7 +230,7 @@ var win = true;
 'return win', then re-run the game, hit play, and move one tile
 */
  
- /*var correctSquares = 0;
+ var correctSquares = 0;
 
  for(var x = 0; x<16; x++) {
      if(document.getElementById(x+1).innerHTML == x+1) {
@@ -253,7 +253,7 @@ var win = true;
    stopTimer(t);
  }
  
-*/
+
 
 return win;
 }
