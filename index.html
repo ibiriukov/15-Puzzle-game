@@ -8,87 +8,97 @@
   <body>
    
    
-    <!***********RULES_SECTION**************************BEGINNING********************************************** >  
-	  <div id="img_container";>
-      <img id="imagePete"; src="Pete_Logo.png" alt="Pete">
-      <img id="imagePete2"; src="Pete_Logo.png" alt="Pete">
-	  </div>
-		<div id="rulesBox">
-			<div id="stickyBox"> 
-				<button id="introScreenBack"; onclick="dispIntro()" >Continue</button> 
-			</div>
-        
-			<div id="rulesContentBox">
-				<h2 style ="margin-left:80px">Rules of the game:</h2>
-				<ul>
-
-					 <li>The "15 puzzle" is a sliding square puzzle;</li>
-					 <li>Reposition the squares one at a time into the configuration shown before;</li>
-					 <li>Arrange the tiles from number one to fifteen;</li>
-					 <li>Move tiles up and down, to left or to the right toward the empty tile;</li>
-					 <li>Tiles cannot be removed;</li>
-					 <li>Enjoy playing the game.</li>
-				</ul>			 
-		    </div>
-		</div>
-        
-    <!***********RULES_SECTION**************************END********************************************** >     
-
-       
-		  
-	<!***********INTRO_SECTION**************************BEGINNING********************************************** > 	
-		
-		<div id="introBox">
-           <div id="exitAppBox"; > 
-           <p style= "color: red"> Application is terminated</p>
-          </div>
-        
-	
-		
-		<button id="playGame"; onclick="playGame()">Play Game</button>
-		
-        <button id="displayRules"; onclick="dispRules()">Display Rules</button>
-		
-        <button id="exitGame"; onclick="exitGame()">Exit Game</button>
-		
-		
-      </div>
-    
-	<!***********INTRO_SECTION**************************END********************************************** >     
-        
-      
-    <!***********GAME_SECTION**************************BEGINNING********************************************** > 
-	 
-		<div id="gameBox">
-         
-            <a href="#"; id="toIntro"; onclick="dispIntro()">Go to Introduction</a>
-            
-			<div class="grid">
-				<button>1</button>
-				<button>2</button>
-				<button>3</button>
-				<button>4</button>
-				<button>5</button>
-				<button>6</button>
-				<button>7</button>
-				<button>8</button>
-				<button>9</button>
-				<button>10</button>
-				<button>11</button>
-				<button>12</button>
-				<button>13</button>
-				<button>14</button>
-				<button>15</button>
-				<button></button>
-			</div>
-
-		  <div class="footer">
-			<button>Play</button>
-			<span id="move">Move: 100</span>
-			<span id="time">Time: 100</span>
-		  </div>
+  
+<!******RULES_SECTION**************BEGINNING************* >
+<div id="img_container";>
+    <img id="imagePete"; src="Pete_Logo.png" alt="Pete">
+    <img id="imagePete2"; src="Pete_Logo.png" alt="Pete">
+</div>
+<div id="rulesBox">
+    <div id="stickyBox">
+        <button id="introScreenBack" onclick="dispIntro()" >Continue</button>
+        <button id="gameScreenBack" onclick="playGame()" >Back to Game</button>
     </div>
-    
+
+    <div id="rulesContentBox">
+        <h2 style ="margin-left:80px">Game Rules:</h2>
+        <ul>
+
+            <li>The "15 Puzzle Game" is a sliding square puzzle</li>
+            <li>The object of the game is to arrange the tiles in ascending numerical order</li>
+            <li>You are provided 15 unordered tiles and one empty space</li>
+            <li>Manipulate the tiles up and down, left or right, toward the empty space</li>
+            <li>Tiles cannot be removed from the game</li>
+            <li>Enjoy this strategic and entertaining game! Good luck!</li>
+        </ul>
+    </div>
+</div>
+
+<!*******RULES_SECTION********END************************ >
+<div id="exitTheGame">
+ 
+ <h1>Application is terminated</h1>
+     <button id="gameScreenBack" onclick="location.reload()"  >Play again</button>
+</div>
+
+
+<!*******INTRO_SECTION************BEGINNING***************** >
+
+<div id="introBox">
+    <div id="exitAppBox"; >
+        <p style= "color: red"> Application is terminated</p>
+    </div>
+
+
+
+    <button id="playGame" onclick="playGame()">Play Game</button>
+
+    <button id="displayRules" onclick="dispRules(); backScreen(1)">Display Rules</button>
+
+    <button id="exitGame" onclick="exitGame()">Exit Game</button>
+
+
+</div>
+
+<!********INTRO_SECTION*********END************************* >
+
+
+<!******GAME_SECTION*********BEGINNING**************************** >
+
+<div id="gameBox">
+
+    <a href="#"  id="toGame" onclick="dispRules(); backScreen(2)">Rules</a> <br>
+    <a href="#"  id="toIntr" onclick="exit()">Exit</a>
+    <! for testing ><p id="testField"></p>  <! for testing >
+    <! for testing ><p style="font-size: 10px" id="testField2"></p> <! for testing >
+    <! Array structure: ><p style="font-size: 10px" id="testField3"></p> <! for testing >
+
+    <div class="grid">
+        <button id="1" onClick="clickedButton(this.id)">1</button>
+        <button id="2" onClick="clickedButton(this.id)">2</button>
+        <button id="3" onClick="clickedButton(this.id)">3</button>
+        <button id="4" onClick="clickedButton(this.id)">4</button>
+        <button id="5" onClick="clickedButton(this.id)">5</button>
+        <button id="6" onClick="clickedButton(this.id)">6</button>
+        <button id="7" onClick="clickedButton(this.id)">7</button>
+        <button id="8" onClick="clickedButton(this.id)">8</button>
+        <button id="9" onClick="clickedButton(this.id)">9</button>
+        <button id="10" onClick="clickedButton(this.id)">10</button>
+        <button id="11" onClick="clickedButton(this.id)">11</button>
+        <button id="12" onClick="clickedButton(this.id)">12</button>
+        <button id="13" onClick="clickedButton(this.id)">13</button>
+        <button id="14" onClick="clickedButton(this.id)">14</button>
+        <button id="15" onClick="clickedButton(this.id)">15</button>
+        <button id="16" onClick="clickedButton(this.id)"></button>
+    </div>
+
+    <div class="footer">
+        <button id="play" onclick="randomNumberGenerator()">Play</button>
+        <span id="move">Move: 0</span>
+        <span id="time">Time: 0s</span>
+    </div>
+</div>
+
     <!***********GAME_SECTION**************************END********************************************** >     
 	  
     
