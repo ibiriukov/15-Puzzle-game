@@ -3,11 +3,12 @@ function backScreen(i){
   if(i == 1){
   document.getElementById("introScreenBack").style.display = 'inline-block';
   document.getElementById("gameScreenBack").style.display = 'none';
-  
+  document.getElementById("winBox").style.display = 'none';
   
   } else{
     document.getElementById("introScreenBack").style.display = 'none';
     document.getElementById("gameScreenBack").style.display = 'inline-block';
+    document.getElementById("winBox").style.display = 'none';
   }
 
 }
@@ -19,7 +20,7 @@ function dispRules() {
     document.getElementById("introBox").style.display = 'none';
     document.getElementById("gameBox").style.display = 'none';
     document.getElementById("exitTheGame").style.display ='none';
-    
+    document.getElementById("winBox").style.display = 'none';
 }
 
 function dispIntro() {
@@ -27,6 +28,7 @@ function dispIntro() {
     document.getElementById("rulesBox").style.display = "none";
     document.getElementById("gameBox").style.display = 'none';
     document.getElementById("exitTheGame").style.display ='none';
+    document.getElementById("winBox").style.display = 'none';
 }
 
 function playGame() {
@@ -34,6 +36,7 @@ function playGame() {
     document.getElementById("introBox").style.display = 'none';
     document.getElementById("rulesBox").style.display = "none";
     document.getElementById("exitTheGame").style.display ='none';
+
 }
 
 function winMessage(gameWon){
@@ -49,6 +52,7 @@ function exit(){
     document.getElementById("gameBox").style.display = 'none';
     document.getElementById("introBox").style.display = 'none';
     document.getElementById("rulesBox").style.display = "none";
+    document.getElementById("winBox").style.display = 'none';
 }
 
 function exitGame() {
@@ -67,13 +71,13 @@ function timeOut() {
 //********************Random Number Generator Section*****************
 var gameActive = false;
 function randomNumberGenerator() {
-
+   document.getElementById("winBox").style.display = 'none';
    var randNumList = new Array();
     
     //document.getElementById("testField").innerHTML = "test";
 
     var n = 16;
-
+   
     do {
         // Generating random number
         const randomNumber = randomN();
@@ -92,7 +96,9 @@ function randomNumberGenerator() {
         var x = Math.floor((Math.random() * 16));
         return x;
     }
+    
 
+    //ar randNumList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0];
     console.log(randNumList);
     loadGrid(randNumList);
     gameActive = true;
@@ -117,10 +123,11 @@ function loadGrid(arr) {
 
     }
     //alert(gridArray.join('\n'));
+    
     if (n == 15){
 		   randomNumberGenerator();  
 		 }  
-		  
+		 
 	  
 
     countTimer();
@@ -225,8 +232,8 @@ function stopTimer(rt) {
 function checkWin() {
 
 var win = true;
-/*
- to demonstrate win screen comment out everything below until 
+
+ /*to demonstrate win screen comment out everything below until 
 'return win', then re-run the game, hit play, and move one tile
 */
  
@@ -249,7 +256,7 @@ var win = true;
  }
  if(correctSquares == 16) {
    win = true;
-   document.getElementById("16").innerHTML = "Win";
+   document.getElementById("winBox").style.display = 'inline-block';
    stopTimer(t);
  }
  
