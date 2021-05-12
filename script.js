@@ -167,7 +167,8 @@ if(!gameActive){
         }
         
     }
-//if(gameWon()){endGame};
+checkWin();
+winMessage(checkWin());
 }
 
 //********************Timer & Counter Section*****************
