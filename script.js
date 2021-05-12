@@ -36,6 +36,13 @@ function playGame() {
     document.getElementById("exitTheGame").style.display ='none';
 }
 
+function winMessage(gameWon){
+  if(gameWon){
+    console.log("Winmessage")
+    document.getElementById("winBox").style.display = "block";
+  }
+}
+
 function exit(){
     
     document.getElementById("exitTheGame").style.display = 'block';
