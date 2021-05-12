@@ -225,10 +225,12 @@ function stopTimer(rt) {
 function checkWin() {
 
 var win = true;
-
-// to demonstrate win screen comment out everything below until 'return win', then re-run the game, hit play, and move one tile
 /*
-var correctSquares = 0;
+ to demonstrate win screen comment out everything below until 
+'return win', then re-run the game, hit play, and move one tile
+*/
+ 
+ /*var correctSquares = 0;
 
  for(var x = 0; x<16; x++) {
      if(document.getElementById(x+1).innerHTML == x+1) {
@@ -250,8 +252,8 @@ var correctSquares = 0;
    document.getElementById("16").innerHTML = "Win";
    stopTimer(t);
  }
- */
-
+ 
+*/
 
 return win;
 }
